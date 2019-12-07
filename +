@@ -1,0 +1,19 @@
+version: '3'
+
+services: 
+  mysql_challange:
+    image: mysql_challange
+    networks:
+      - custom_network_compose
+    volumes:
+      - /home/sftpuser/dockerchallange/mdir/mysqlvolume:/var/lib/mysql
+  rest_challange:
+    image: rest_challange
+    depends_on:
+      - mysql_challange
+    ports:
+      - 8020:8080
+    networks:
+      - custom_network_compose
+networks:
+        custom_network_compose:
