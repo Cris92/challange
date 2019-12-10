@@ -10,7 +10,7 @@ services:
     depends_on:
       - mysql_challange
     ports:
-      - 8020:8080
+      - 8010:8080
     networks:
       - custom_network_compose
 networks:
