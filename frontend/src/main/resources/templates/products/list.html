@@ -17,11 +17,12 @@
 	th:href="@{/css/bootstrap.css}" />
 </head>
 <body>
-	<table>
+	<table class="table table-dark">
 		<thead>
 			<tr>
-				<th>Title</th>
-				<th>Author</th>
+				<th scope="col">Name</th>
+				<th scope="col">Quantity Available</th>
+				<th scope="col">Quantity Available At Store</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -29,8 +30,9 @@
 				<td colspan="2">No Products Available</td>
 			</tr>
 			<tr th:each="product : ${products}">
-				<td><span th:text="${product.name}"> Name </span></td>
-				<td><span th:text="${product.author}"> Author </span></td>
+				<td scope="row"><span th:text="${product.name}"> Name </span></td>
+				<td scope="row"><span th:text="${product.quantityAvailable}"> Quantity Available </span></td>
+				<td scope="row"><span th:text="${product.quantityAvailableAtStore}"> Quantity Available At Store </span></td>
 			</tr>
 		</tbody>
 	</table>
