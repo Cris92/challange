@@ -2,7 +2,9 @@
 
 Run docker-compose up to run the docker images
 
-The project is composed by 2 docker file, one for the mysql and one for the spring boot application
+The project is composed by 3 docker images, one for the mysql,one for the spring boot rest application and one for the front end application.
+All these images will be runned as containers by a docker-compose command.
+The 'code' folder containes the code for the 2 applications, the mysql part is just composed from the dockerfile.
 
 
 # How to Start
