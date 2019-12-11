@@ -68,4 +68,10 @@ public class Product {
 	public void setQuantityRequested(int quantityRequested) {
 		this.quantityRequested = quantityRequested;
 	}
+
+	@Override
+	public String toString() {
+		return "{\"name\":\"" + name + "\",\"price\":\"" + price + "\",\"quantityAvailable\":\"" + quantityAvailable
+				+ "\"}";
+	}
 }
