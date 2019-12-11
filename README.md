@@ -10,8 +10,15 @@ The 'code' folder containes the code for the 2 applications, the mysql part is j
 # How to Start
 
 - Clone repository in local
-- Check if port 8010 is not occupied, otherwise change the docker-compose.yml at line 13 in:
+-do
+```
+docker image build -t [rest/mysql/frontend]_challange . 
+```
+in the main directory of the various applciations.
+Just one name for folder
 
+# TODO
+- Check if port 8010 is not occupied, otherwise change the docker-compose.yml at line 13 in:
 
 ```
 xxxx:8080
@@ -31,6 +38,9 @@ run
 ```
 docker-compose up
 ```
+
+# Actually
+leave the default ports
 
 The compose will run 3 containers, the mysql container, that contains a script that will create the default table, and some example data
 (I didn't added a bind mount,but in other situation i would add it),the spring-boot container that will run the API application, and the one that will run the frontend container.
